@@ -6,7 +6,7 @@ Este proyecto es una aplicación web desarrollada con Flasks que permite predeci
 ## :link: Modelo de Cluster y Clasificación: 
 - [Colab](https://colab.research.google.com/drive/1CWWEfohJGe9jXajRc0K-SAb_YIEVHI9U#scrollTo=NPjYTjRph8Ei)
 
-## Características del Proyecto
+## :package: Características del Proyecto
 - Modelo de clasificación entrenado con AdaBoost (scikit-learn)
 - Interfaz web
 - Implementación y despliegue
