@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Predicción de Condición Física</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-left: 6px solid #4CAF50;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Predicción de Condición Física</h1>
+
+    <form method="post">
+        <label>Género (0: Mujer, 1: Hombre):</label>
+        <input type="number" name="Gender" min="0" max="1" required value="{{ request.form.get('Gender', '') }}">
+
+        <label>Porcentaje de grasa corporal:</label>
+        <input type="number" step="any" name="Fat_Percentage" required value="{{ request.form.get('Fat_Percentage', '') }}">
+
+        <label>Ingesta de agua (litros):</label>
+        <input type="number" step="any" name="Water_Intake (liters)" required value="{{ request.form.get('Water_Intake (liters)', '') }}">
+
+        <label>Frecuencia de entrenamiento (días/semana):</label>
+        <input type="number" step="any" name="Workout_Frequency (days/week)" required value="{{ request.form.get('Workout_Frequency (days/week)', '') }}">
+
+        <label>Nivel de experiencia (1: Principiante, 2: Intermedio, 3: Avanzado):</label>
+        <input type="number" name="Experience_Level" min="1" max="3" required value="{{ request.form.get('Experience_Level', '') }}">
+
+        <label>Índice de Masa Corporal (BMI):</label>
+        <input type="number" step="any" name="BMI" required value="{{ request.form.get('BMI', '') }}">
+
+        <button type="submit">Predecir</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h2>Resultado: {{ prediction }}</h2>
+        </div>
+    {% endif %}
+</body>
+</html>
