@@ -15,6 +15,6 @@ Este proyecto es una aplicación web desarrollada con Flasks que permite predeci
 - Docker
 
 ```
-:woman: Autor
+ 👩🏻‍🦱 Autora
 Nombre: VEL
 ```
