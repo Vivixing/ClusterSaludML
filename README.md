@@ -14,4 +14,4 @@ Este proyecto es una aplicación web desarrollada con Flasks que permite predeci
 - Google Colab
 - Docker
 
-
+Vivian Echeverri Londoño
