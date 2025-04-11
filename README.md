@@ -15,6 +15,6 @@ Este proyecto es una aplicación web desarrollada con Flasks que permite predeci
 - Docker
 
 ```
-:woman_curly_haired: :skin-tone-1: Autor
+:woman_curly_haired: Autor
 Nombre: VEL
 ```
